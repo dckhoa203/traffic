@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CitiesTable extends Migration
+class StreetTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cities', function (Blueprint $table) {
-            $table->increments('city_id')->comment('id tỉnh');
-            $table->string('city_name')->comment('tên tỉnh');
+        Schema::create('streets', function (Blueprint $table) {
+            $table->increments('street_id')->comment('id đường');
+            $table->string('street_name')->comment('tên đường');
+            $table->integer('district_id')->unsigned()->comment('id huyện');
         });
     }
 

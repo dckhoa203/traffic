@@ -18,7 +18,7 @@ class CamerasTable extends Migration
             $table->string('camera_name')->comment('tên camera');
             $table->float('coordinate_x')->comment('tọa độ x');
             $table->float('coordinate_y')->comment('tọa độ y');
-            $table->integer('road_id')->unsigned()->comment('id đường');
+            $table->integer('street_id')->unsigned()->comment('id đường');
         });
     }
 

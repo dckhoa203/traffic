@@ -13,7 +13,10 @@ class VehicleTypesTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('vehicle_types', function (Blueprint $table) {
+            $table->increments('vehicle_type_id')->comment('id loại xe');
+            $table->string('vehicle_type_name')->comment('tên loại xe');
+        });
     }
 
     /**
@@ -23,9 +26,6 @@ class VehicleTypesTable extends Migration
      */
     public function down()
     {
-        Schema::create('vehicle_types', function (Blueprint $table) {
-            $table->increments('vehicle_type_id')->comment('id loại xe');
-            $table->string('vehicle_type_name')->comment('tên loại xe');
-        });
+        
     }
 }

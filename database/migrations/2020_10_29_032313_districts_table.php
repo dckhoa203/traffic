@@ -16,7 +16,9 @@ class DistrictsTable extends Migration
         Schema::create('districts', function (Blueprint $table) {
             $table->increments('district_id')->comment('id huyện');
             $table->string('district_name')->comment('tên huyện');
-            $table->integer('city_id')->unsigned()->comment('id tỉnh');
+            $table->string('gso_id')->comment('mã địa giới');
+            $table->integer('province_id')->unsigned()->comment('id tỉnh');
+            
         });
     }
 
