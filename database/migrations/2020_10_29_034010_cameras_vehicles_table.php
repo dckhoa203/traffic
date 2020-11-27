@@ -14,6 +14,7 @@ class CamerasVehiclesTable extends Migration
     public function up()
     {
         Schema::create('cameras_vehicles', function (Blueprint $table) {
+            $table->increments('camera_vehicle_id')->comment('id lien ket camera vs vehicle');
             $table->dateTime('time')->comment('thời gian');
             $table->integer('camera_id')->unsigned()->comment('id camera');
             $table->integer('vehicle_id')->unsigned()->comment('id xe');

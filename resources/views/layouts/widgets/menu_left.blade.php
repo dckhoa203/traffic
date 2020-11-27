@@ -8,6 +8,30 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library --> 
           {{-- @if(Session::get('user')->role == 0) --}}
+            {{-- Đơn vị hành chính --}}
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-university"></i>
+                <p>
+                  Đơn vị hành chính
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{route('provinces.index')}}" class="nav-link">
+                    <i class="nav-icon far fa-circle nav-icon"></i>
+                    <p>Tỉnh</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{route('districts.index')}}" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Huyện</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
             {{-- Trung tâm --}}
             <li class="nav-item">
               <a href="#" class="nav-link">
@@ -44,30 +68,7 @@
                 </p>
               </a>
             </li>
-            {{-- Đơn vị hành chính --}}
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-university"></i>
-                <p>
-                  Đơn vị hành chính
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="nav-icon far fa-circle nav-icon"></i>
-                    <p>Tỉnh/ Thành phố</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Quận/ Huyện</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
+            
             {{-- Bài viết --}}
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
