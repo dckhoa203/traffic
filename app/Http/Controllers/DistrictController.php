@@ -29,4 +29,14 @@ class DistrictController extends Controller
         
         return redirect('supadmin/districts')->with('success', 'Cập nhật thành công');
     }
+
+    // Lấy district theo city
+    public function get_district_city (Request $request)
+    {
+        $province_id = $request->id;
+
+        $data = District::where('province_id', $province_id)->get();
+       
+        return $data;
+    }
 }

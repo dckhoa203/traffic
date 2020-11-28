@@ -28,5 +28,10 @@ class District extends Model
     {
         return $this->belongsTo(Province::class,'province_id','province_id');
     }
+
+    public function toll_stations()
+    {
+        return $this->hasMany(TollStation::class, 'district_id', 'district_id');
+    }
     
 }

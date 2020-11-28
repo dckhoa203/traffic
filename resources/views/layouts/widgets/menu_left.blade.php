@@ -11,9 +11,9 @@
             {{-- Đơn vị hành chính --}}
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-university"></i>
+                <i class="nav-icon fas fa-code-branch"></i>
                 <p>
-                  Đơn vị hành chính
+                  Hành chính
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
@@ -32,83 +32,10 @@
                 </li>
               </ul>
             </li>
-            {{-- Trung tâm --}}
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-school"></i>
-                <p>
-                  Trung tâm
-                </p>
-              </a>
-            </li>
-            {{-- Chi nhánh --}}
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-code-branch"></i>
-                <p>
-                  Chi nhánh
-                </p>
-              </a>
-            </li>
-            {{-- Khóa học --}}
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-file-invoice-dollar"></i>
-                <p>
-                  Hóa đơn
-                </p>
-              </a>
-            </li>
-            {{-- Thể loại --}}
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon nav-icon fas fa-th"></i>
-                <p>
-                  Thể loại
-                </p>
-              </a>
-            </li>
-            
-            {{-- Bài viết --}}
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon nav-icon fas fa-blog"></i>
-                <p>
-                  Bài đăng
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Quản lý bài đăng</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Tạo bài đăng</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Duyệt bài đăng</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Quản lý bình luận</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
             {{-- Tài khoản --}}
             <li class="nav-item has-treeview">
               <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-users"></i>
+                <i class="nav-icon fas fa-user-friends"></i>
                 <p>
                   Tài khoản
                   <i class="right fas fa-angle-left"></i>
@@ -135,6 +62,42 @@
                 </li>
               </ul>
             </li>
+            {{-- Chi nhánh --}}
+            <li class="nav-item">
+              <a href="{{route('tollstations.index')}}" class="nav-link">
+                <i class="nav-icon fas fa-warehouse"></i>
+                <p>
+                  Trạm thu
+                </p>
+              </a>
+            </li>
+            {{-- Trung tâm --}}
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-video"></i>
+                <p>
+                  Cameras
+                </p>
+              </a>
+            </li>
+            {{-- Khóa học --}}
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-car-alt"></i>
+                <p>
+                  Phương tiện
+                </p>
+              </a>
+            </li>
+            {{-- Thể loại --}}
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-list-alt"></i>
+                <p>
+                  Loại phương tiện
+                </p>
+              </a>
+            </li>          
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

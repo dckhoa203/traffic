@@ -22,7 +22,7 @@
                                             <th>Chức năng</th>
                                         </tr>
                                     </thead>
-                                    <tbody  style="font-size: 12px">
+                                    <tbody>
                                         @foreach ($data as $item)
                                             <tr>
                                                 <td>{{$item->province_id}}</td>
@@ -31,7 +31,7 @@
                                                 {{-- @if (Auth::user()->hasRole('Admin')) --}}
                                                     <td>
                                                         <form action="#" method="post" class="delete_form">
-                                                        <a  href="{{route('provinces.edit', $item->province_id)}}" data-toggle="toolytip" data-placement="top" title="Chỉnh sửa">&nbsp;&nbsp;&nbsp;<i class="fa fa-pencil text-inverse m-r-10 fa-lg"></i></a>
+                                                        <a  href="{{route('provinces.edit', $item->province_id)}}" data-toggle="toolytip" data-placement="top" title="Chỉnh sửa">&nbsp;&nbsp;&nbsp;<i style="font-size: 15px;" class="fa fa-pencil text-inverse m-r-10 fa-lg"></i></a>
                                                             @csrf
                                                             {{-- <button type="submit" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-placement="top" title="Xóa"><i class="fal fa-trash-alt fa-lg"></i></button> --}}
                                                         </form>

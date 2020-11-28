@@ -17,26 +17,30 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Tên huyện</th>
-                                            <th>Tên tỉnh</th>
-                                            <th>Mã địa giới</th>
+                                            <th>tên trạm thu phí</th>
+                                            <th>Địa chỉ</th>
                                             <th>Chức năng</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach ($data as $item)
                                             <tr>
-                                                <td>{{$item->district_id}}</td>
-                                                <td>{{$item->district_name}}</td>
-                                                <td>{{$item->provinces->province_name}}</td>
-                                                <td>{{$item->gso_id}}</td>
-                                                <td>
-                                                    <form action="#" method="post" class="delete_form">
-                                                    <a  href="{{route('districts.edit', $item->district_id)}}" data-toggle="toolytip" data-placement="top" title="Chỉnh sửa">&nbsp;&nbsp;&nbsp;<i style="font-size: 15px;" class="fa fa-pencil text-inverse m-r-10 fa-lg"></i></a>
-                                                        @csrf
-                                                        {{-- <button type="submit" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-placement="top" title="Xóa"><i class="fal fa-trash-alt fa-lg"></i></button> --}}
-                                                    </form>
+                                                <td>{{$item->toll_station_id}}</td>
+                                                <td>{{$item->toll_station_name}}</td>
+                                                <td>{{$item->districts->district_name}}, 
+                                                    {{$item->districts->provinces->province_name}}
                                                 </td>
+                                                {{-- @if (Auth::user()->hasRole('Admin')) --}}
+                                                    <td>
+                                                        <form action="{{route('tollstations.destroy', $item->toll_station_id)}}" method="post" class="delete_form">
+                                                        <a  href="{{route('tollstations.edit', $item->toll_station_id)}}" data-toggle="toolytip" data-placement="top" title="Chỉnh sửa">&nbsp;&nbsp;&nbsp;<i style="font-size: 15px;" class="fa fa-pencil text-inverse m-r-10 fa-lg"></i></a>
+                                                            @csrf
+                                                            <button type="submit" class="btn btn-sm btn-icon btn-pure btn-outline delete-row-btn" data-toggle="tooltip" data-placement="top" title="Xóa"><i style="font-size: 16px;" class="fal fa-trash-alt fa-lg"></i></button>
+                                                        </form>
+                                                    </td>
+                                                {{-- @else --}}
+                                                    {{-- <td></td> --}}
+                                                {{-- @endif --}}
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -70,7 +74,7 @@
         // Họp thoại cảnh báo xóa
         $(document).ready(function () {
             $('.delete_form').on('submit',function(){
-                if(confirm('Bạn có muốn xóa quận/huyện này không?'))
+                if(confirm('Bạn có muốn xóa không?'))
                 {
                     return true;
                 }
