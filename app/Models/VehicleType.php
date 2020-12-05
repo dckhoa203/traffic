@@ -9,7 +9,7 @@ class VehicleType extends Model
 {
     use HasFactory;
 
-    protected $table = 'vehcle_types';
+    protected $table = 'vehicle_types';
 
     protected $primaryKey = 'vehicle_type_id';
 
