@@ -16,9 +16,10 @@ class CamerasTable extends Migration
         Schema::create('cameras', function (Blueprint $table) {
             $table->increments('camera_id')->comment('id camera');
             $table->string('camera_name')->comment('tên camera');
-            $table->float('coordinate_x')->comment('tọa độ x');
-            $table->float('coordinate_y')->comment('tọa độ y');
-            $table->integer('street_id')->unsigned()->comment('id đường');
+            $table->string('ip')->nullable()->comment('dia chi ip');
+            // $table->float('coordinate_x')->comment('tọa độ x');
+            // $table->float('coordinate_y')->comment('tọa độ y');
+            $table->integer('toll_station_id')->unsigned()->comment('id tram thu');
         });
     }
 

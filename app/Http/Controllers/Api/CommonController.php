@@ -38,4 +38,18 @@ class CommonController extends Controller
         
         return response()->json($data, 200);
     }
+
+    public function find_toll_stationds($id)
+    {
+        $data = TollStation::findOrFail($id);
+        
+        return response()->json($data, 200);
+    }
+
+    public function store(Request $request)
+    {
+        $data = VehicleType::create($request->all());
+
+        return response()->json($data, 201);
+    }
 }

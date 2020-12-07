@@ -14,10 +14,10 @@ class VehiclesTable extends Migration
     public function up()
     {
         Schema::create('vehicles', function (Blueprint $table) {
-            $table->increments('vehcle_id')->comment('id xe');
-            $table->string('liense_plate', 20)->nullable()->comment('biển số xe');
-            $table->string('image')->comment('hình ảnh');
-            $table->integer('province_id')->nullable()->unsigned()->comment('id tỉnh');
+            $table->increments('vehicle_id')->comment('id xe');
+            // $table->string('liense_plate', 20)->nullable()->comment('biển số xe');
+            $table->string('image')->nullable()->comment('hình ảnh');
+            $table->integer('vehicle_type_id')->nullable()->unsigned()->comment('id loai pt');
         });
     }
 

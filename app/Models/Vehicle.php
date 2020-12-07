@@ -9,18 +9,17 @@ class Vehicle extends Model
 {
     use HasFactory;
 
-    protected $table = 'vehcles';
+    protected $table = 'vehicles';
 
-    protected $primaryKey = 'vehcle_id';
+    protected $primaryKey = 'vehicle_id';
 
     protected $keyType = 'int';
 
     public $timestamps = false;
 
     protected $fillable = [
-        'vehcle_id',
-        'liense_plate',
+        'vehicle_id',
         'image',
-        'province_id',
+        'vehicle_type_id',
     ];
 }
