@@ -61,7 +61,7 @@ class VehicleController extends Controller
     public function find_vehicle_type($id)
     {
         $data = $this->join();
-        $data = $data->where('cameras_vehicles.vehicle_type_id', $id)
+        $data = $data->where('vehicles.vehicle_type_id', $id)
                      ->select('vehicles.vehicle_id', 'vehicles.image','cameras_vehicles.time',
                               'vehicle_types.vehicle_type_name', 'cameras.camera_name',
                               'toll_stations.toll_station_name')
