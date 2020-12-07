@@ -8,6 +8,7 @@ use App\Models\District;
 use App\Models\Province;
 use App\Models\TollStation;
 use App\Models\VehicleType;
+use App\Models\Camera;
 
 class CommonController extends Controller
 {
@@ -35,6 +36,13 @@ class CommonController extends Controller
     public function get_toll_stations()
     {
         $data = TollStation::all();
+        
+        return response()->json($data, 200);
+    }
+
+    public function get_cameras()
+    {
+        $data = Camera::all();
         
         return response()->json($data, 200);
     }

@@ -22,6 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('provinces', [CommonController::class, 'get_provinces']);
 Route::get('districts', [CommonController::class, 'get_districts']);
 Route::get('tollstations', [CommonController::class, 'get_toll_stations']);
+Route::get('cameras', [CommonController::class, 'get_cameras']);
 
 Route::get('vehicles', [VehicleController::class, 'show_vehicle']);
 Route::get('vehicles/{id}', [VehicleController::class, 'find_vehicle']);
