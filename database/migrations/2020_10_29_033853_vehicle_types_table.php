@@ -14,7 +14,7 @@ class VehicleTypesTable extends Migration
     public function up()
     {
         Schema::create('vehicle_types', function (Blueprint $table) {
-            $table->increments('vehicle_type_id')->comment('id loại xe');
+            $table->integer('vehicle_type_id')->unsigned()->comment('id loại xe');
             $table->string('vehicle_type_name')->comment('tên loại xe');
         });
     }

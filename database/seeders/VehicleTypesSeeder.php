@@ -15,17 +15,18 @@ class VehicleTypesSeeder extends Seeder
     public function run()
     {
         $data = array(
-            'motorcycle',
-            'car',
-            'bus',
-            'truck',
-            'container',
-            'bicycle',
+            [0, 'motorcycle'],
+            [1, 'car'],
+            [2, 'bus'],
+            [3, 'truck'],
+            [4, 'container'],
+            [5, 'bicycle'],
         );
 
         foreach($data as $key => $value){
             DB::table('vehicle_types')->insert([
-                'vehicle_type_name' => $value,
+                'vehicle_type_id' => $value[0],
+                'vehicle_type_name' => $value[1]
             ]);
         }
     }
