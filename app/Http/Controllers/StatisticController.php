@@ -20,6 +20,7 @@ class StatisticController extends Controller
     }
 
     public function day(){
+        
         $daynow = Carbon::now()->day;
         $data_now = $this->join()->whereDay('time', $daynow)->get();
         $now = [0, 0, 0, 0, 0, 0];
@@ -45,7 +46,7 @@ class StatisticController extends Controller
                     break;            
             }
         }
-
+        
         $yesterday = Carbon::yesterday();
         $data_yesterday = $this->join()->whereDay('time', $yesterday)->get();
         $sub = [0, 0, 0, 0, 0, 0];

@@ -73,7 +73,7 @@
             </li>
             {{-- Trung tâm --}}
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="{{route('cameras')}}" class="nav-link">
                 <i class="nav-icon fas fa-video"></i>
                 <p>
                   Cameras

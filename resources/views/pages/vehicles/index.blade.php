@@ -28,7 +28,7 @@
                                     <tbody>
                                         @foreach ($data as $key => $item)
                                             <tr>
-                                                <td>{{$key}}</td>
+                                                <td>{{$key+1}}</td>
                                                 <td>{{$item->toll_station_name}}</td>
                                                 <td>{{$item->camera_name}}</td>
                                                 <td>{{$item->vehicle_type_name}}</td>
