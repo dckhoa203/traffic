@@ -27,4 +27,10 @@ class TollStation extends Model
     {
         return $this->belongsTo(District::class,'district_id','district_id');
     }
+
+    public function users()
+    {
+        return $this->hasMany(Usre::class, 'toll_station_id', 'toll_station_id');
+    }
+
 }

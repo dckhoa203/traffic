@@ -11,15 +11,25 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    protected $table = 'users';
+
+    protected $primaryKey = 'user_id';
+
+    protected $keyType = 'int';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
+        'user_id',
+        'toll_station_id',
+        'firstname',
+        'lastname',
+        'username',
         'password',
+        'type',
     ];
 
     /**
@@ -40,4 +50,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function toll_stations()
+    {
+        return $this->belongsTo(TollStation::class,'toll_station_id','toll_station_id');
+    }
 }
