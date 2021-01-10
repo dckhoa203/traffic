@@ -17,7 +17,8 @@
                                     <thead>
                                         <tr>
                                             <th>#</th>
-                                            <th>Loại phương tiện</th>
+                                            <th>Camera</th>
+                                            <th>ip</th>
                                             <th>Chức năng</th>
                                         </tr>
                                     </thead>
@@ -25,7 +26,8 @@
                                         @foreach ($data as $key => $item)
                                             <tr>
                                                 <td>{{$key}}</td>
-                                                <td>{{$item->vehicle_type_name}}</td>
+                                                <td>{{$item->camera_name}}</td>
+                                                <td>{{$item->ip}}</td>
                                                 </td>
                                                 {{-- @if (Auth::user()->hasRole('Admin')) --}}
                                                     <td>

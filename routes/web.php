@@ -41,7 +41,7 @@ Route::get('/hash/{value}', function ($value) {
 Route::group(['middleware' => ['checklogin']], function () {
     Route::group(['middleware' => ['checkadmin']], function () {
         Route::prefix('admin')->group(function() {
-            Route::get('/', [VehicleController::class, 'index']);
+            Route::get('/', [VehicleController::class, 'index'])->name('a');
             Route::get('/', [ProvinceController::class, 'index']);
             Route::prefix('provinces')->group(function () {
                 Route::get('/', [ProvinceController::class, 'index'])->name('provinces.index');
@@ -79,21 +79,25 @@ Route::group(['middleware' => ['checklogin']], function () {
             Route::prefix('vehicletypes')->group(function () {
                 Route::get('/', [VehicleTypeController::class, 'index'])->name('vehicletypes');
             });
+
+            Route::prefix('cameras')->group(function () {
+                Route::get('/', [VehicleTypeController::class, 'camera'])->name('cameras');
+            });
         });
     });
 
     Route::group(['middleware' => ['checkuser']], function () {
         Route::prefix('user')->group(function() {
-            Route::get('/', [VehicleController::class, 'index']);
+            Route::get('/', [VehicleController::class, 'index'])->name('u');
             Route::prefix('statistics')->group(function () {
                 // Route::get('/', [StatisticController::class, 'index'])->name('statistics');
-                Route::get('/day', [StatisticController::class, 'day'])->name('statcistis.day');
-                Route::get('/week', [StatisticController::class, 'week'])->name('statistics.week');
-                Route::get('/month', [StatisticController::class, 'month'])->name('statistics.month');
+                Route::get('/day', [StatisticController::class, 'day'])->name('ustatcistis.day');
+                Route::get('/week', [StatisticController::class, 'week'])->name('ustatistics.week');
+                Route::get('/month', [StatisticController::class, 'month'])->name('ustatistics.month');
             });
 
             Route::prefix('vehicles')->group(function () {
-                Route::get('/', [VehicleController::class, 'index'])->name('vehicles');
+                Route::get('/', [VehicleController::class, 'index'])->name('uvehicles');
             });
            
         });

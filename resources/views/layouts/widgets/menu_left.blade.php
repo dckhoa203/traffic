@@ -126,7 +126,7 @@
             @endif       
             @if(Session::get('user')->type == 1)
             <li class="nav-item">
-              <a href="{{route('vehicles')}}" class="nav-link">
+              <a href="{{route('uvehicles')}}" class="nav-link">
                 <i class="nav-icon fas fa-car-alt"></i>
                 <p>
                   Phương tiện
@@ -134,7 +134,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('statcistis.day')}}" class="nav-link">
+              <a href="{{route('ustatcistis.day')}}" class="nav-link">
                 <i class="nav-icon fas fa-list-alt"></i>
                 <p>
                   Thống kê ngày
@@ -142,7 +142,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('statistics.week')}}" class="nav-link">
+              <a href="{{route('ustatistics.week')}}" class="nav-link">
                 <i class="nav-icon fas fa-list-alt"></i>
                 <p>
                   thống kê tuần
@@ -150,7 +150,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{route('statistics.month')}}" class="nav-link">
+              <a href="{{route('ustatistics.month')}}" class="nav-link">
                 <i class="nav-icon fas fa-list-alt"></i>
                 <p>
                   thống kê tháng
