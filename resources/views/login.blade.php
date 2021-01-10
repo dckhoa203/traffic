@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 @include('layouts.widgets.head')
 <body class="hold-transition login-page">
@@ -9,6 +9,7 @@
       <p class="login-box-msg">ĐĂNG NHẬP</p>
 
       <form action="{{route('postlogin')}}" method="post">
+        @csrf
         <div class="input-group mb-3">
           <input type="text" class="form-control" name="username" placeholder="Tên đăng nhập">
           <div class="input-group-append">
@@ -50,25 +51,4 @@
 @include('layouts.widgets.js')
 
 </body>
-</html> --}}
-
-
-<!DOCTYPE html>
-<html>
-<body>
-
-<h2>HTML Forms</h2>
-
-<form action="{{route('postlogin')}}" method="post">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="username" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="password" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
-
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
-
-</body>
 </html>
-

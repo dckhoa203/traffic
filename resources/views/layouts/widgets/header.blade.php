@@ -26,8 +26,8 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <a class="btn"><?php echo date("d/m/Y")?>&nbsp-&nbsp<span id="demo"></span></a>
-      <script>
+      <a class="btn" href="{{route('logout')}}"><i class="fas fa-sign-out-alt"></i> ĐĂNG XUẤT</span></a>
+      {{-- <script>
         function clock(){
             //Khởi tạo đối tượng timer sử dụng Date Object
             var timer = new Date();
@@ -50,6 +50,6 @@
         }
         //Thực hiện hàm clock theo chu kỳ 1 giây
         setInterval("clock()",1000);
-      </script>
+      </script> --}}
     </ul>
   </nav>
